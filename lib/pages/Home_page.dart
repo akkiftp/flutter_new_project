@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/drawer.dart';
+
 class Homepage extends StatelessWidget {
   final int Days = 20;
   final String name1 = "Ankit Gupta";
@@ -9,17 +11,17 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Ankit Gupta App")),
+        title: Center(child: Text("Catalog App",style: TextStyle(color: Colors.black),)),
       ),
       body: Center(
           child: Text(
-        "Welcome to $Days of flutter by $name2",
+        "Welcome to $Days of flutter by $name1",
         style: TextStyle(
           color: Colors.indigo,
         ),
       )),
-      drawer: Drawer(),
-      backgroundColor: Colors.cyan,
+      drawer: MyDrawer(),
+      
     );
   }
 }
